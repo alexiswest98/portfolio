@@ -4,7 +4,7 @@ import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
 const Earth = () => {
-  const earth = useGLTF("./Robot/scene.gltf");
+  const earth = useGLTF("./Robot/robot.gltf");
 
   return (
     <mesh>
