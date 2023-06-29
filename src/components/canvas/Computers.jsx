@@ -32,32 +32,32 @@ const Computers = ({isMobile}) => {
 
 //error handling
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+// class ErrorBoundary extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { hasError: false };
+//   }
 
-  static getDerivedStateFromError(error) {
-    // Update state to display fallback UI
-    return { hasError: true };
-  }
+//   static getDerivedStateFromError(error) {
+//     // Update state to display fallback UI
+//     return { hasError: true };
+//   }
 
-  componentDidCatch(error, errorInfo) {
-    // You can also log the error to an error reporting service
-    console.error(error, errorInfo);
-  }
+//   componentDidCatch(error, errorInfo) {
+//     // You can also log the error to an error reporting service
+//     console.error(error, errorInfo);
+//   }
 
-  render() {
-    if (this.state.hasError) {
-      // Render fallback UI
-      return <div>Error occurred. Please try again.</div>;
-    }
+//   render() {
+//     if (this.state.hasError) {
+//       // Render fallback UI
+//       return <div>Error occurred. Please try again.</div>;
+//     }
 
-    // Render the component tree as normal
-    return this.props.children;
-  }
-}
+//     // Render the component tree as normal
+//     return this.props.children;
+//   }
+// }
 
 //canvas
 
@@ -87,7 +87,7 @@ const ComputersCanvas = () => {
 
 
   return (
-    <ErrorBoundary>
+    // <ErrorBoundary>
     <Canvas
       frameloop='demand'
       shadows
@@ -104,7 +104,7 @@ const ComputersCanvas = () => {
       </Suspense>
       <Preload all />
     </Canvas>
-    </ErrorBoundary>
+    // </ErrorBoundary>
   )
 }
 
